@@ -40,6 +40,7 @@ core.register_node("structure_tower:loot_farm",{
     }
     },
 })
+--[[
 core.register_decoration({
     name = "structure_tower:temp_decoration",
     deco_type = "simple",
@@ -51,6 +52,7 @@ core.register_decoration({
     decoration = "structure_tower:temp",
     place_desc = "structure_tower:temp",
 })
+    ]]
 core.register_lbm({
     name = "structure_tower:temp_lbm",
     nodenames = {"structure_tower:temp"},
