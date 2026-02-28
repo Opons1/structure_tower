@@ -9,7 +9,9 @@ function structure_tower.generate(pos)
     for i = 0, 50 do
         core.emerge_area({x=pos.x, y=pos.y+i*8, z=pos.z}, {x=pos.x+15, y=pos.y+(i+1)*8-1, z=pos.z+15})
         if i == 0 then
-            core.place_schematic({x=pos.x, y=pos.y, z=pos.z}, core.get_modpath("structure_tower").."/schematics/tower_base.mts", "0", nil, true)
+            core.place_schematic({x=pos.x, y=pos.y, z=pos.z}, core.get_modpath("structure_tower").."/schematics/tower_floor1.mts", "0", nil, true)
+            core.place_schematic({x=pos.x, y=pos.y-8, z=pos.z}, core.get_modpath("structure_tower").."/schematics/tower_under.mts", "0", nil, true)
+
         else
             core.place_schematic({x=pos.x, y=pos.y+i*8, z=pos.z}, core.get_modpath("structure_tower").."/schematics/"..structure_tower.floors[math.random(#structure_tower.floors)], "0", nil, true)
         end
